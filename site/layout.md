@@ -22,6 +22,9 @@
 |logoutAction|退出登录的接口地址|String|否|false|
 |rule|权限接口请求回来的数据|Object|否|false|
 |barActive|二级导航高亮|String|否|无|
+|orgPath|主办后台地址|String|否|无|
+|orgTarget|主办后台打开方式|String|否|'_self'|
+|orgTitle|主办后台名称|String|否|'切换主办版'|
 
 ### 方法
 
