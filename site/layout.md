@@ -1,6 +1,6 @@
 # 真正的页面
 
-<w-layout menuTitle="李红星" orgPath="https://www.evente.cn" logo="https://2img.evente.cn/04/73/9c/da50756ce5f737490c1beb1cb9.jpg" :menus="menuTestRule" class="demo" logoutAction="https://www.easy-mock.com/mock/5ab386ecca15e11ded65b593/chinese/getLoginOutCallBackUrl" :navs="barTestRule" barName="二级导航" :show="true">
+<w-layout menuTitle="李红星" orgPath="https://www.evente.cn" logo="https://2img.evente.cn/04/73/9c/da50756ce5f737490c1beb1cb9.jpg" :menus="menuTestRule" class="demo" logoutAction="https://www.easy-mock.com/mock/5ab386ecca15e11ded65b593/chinese/getLoginOutCallBackUrl" :navs="barTestRule" barName="二级导航" :show="true" headerLink="https://www.evente.cn" headerTarget="_blank">
   <h1>这是真正的标题</h1>
   <p>这是真正内容</p>
 </w-layout>
@@ -25,6 +25,8 @@
 |orgPath|主办后台地址|String|否|无|
 |orgTarget|主办后台打开方式|String|否|'_self'|
 |orgTitle|主办后台名称|String|否|'切换主办版'|
+|headerLink|主办后台名称的链接|String|否|'javascript:;'|
+|headerTarget|主办后台名称的跳转方式|String|否|'_self'|
 
 ### 方法
 
