@@ -3,7 +3,7 @@
     <div class="wd-menu" :class="{'wd-menu-hover': hover}">
       <div class="wd-menu-header">
         <img class="wd-menu-header-icon" :src="logoValue" @error="errorFn">
-        <a href="javascript:;" target="_blank" class="wd-menu-header-title">{{title}}</a>
+        <a :href="headerLink" :target="headerTarget" class="wd-menu-header-title">{{title}}</a>
       </div>
       <ul class="wd-menu-list">
         <li class="wd-menu-list-item" v-for="(rule, ruleIndex) in menus" :key="ruleIndex">
@@ -67,6 +67,14 @@
       };
     },
     props: {
+      headerLink: {
+        type: String,
+        default: 'javascript:;',
+      },
+      headerTarget: {
+        type: String,
+        default: '_self',
+      },
       orgPath: String,
       orgTitle: {
         type: String,
