@@ -31,6 +31,7 @@ module.exports = {
       "vue": "never"
     }],
     "spaced-comment": "off",
+    "no-script-url": 0,
     "no-dupe-keys": "off",
     "no-console": "off",
     "no-plusplus": "off",
