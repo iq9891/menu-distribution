@@ -17,12 +17,14 @@
 |orgTitle|主办后台名称|String|否|'切换主办版'|
 |title|顶部名字|String|否|无|
 |logo|顶部名字|String|否|无|
+|afterOut|退出之后触发|Function|否|() => {}|
 
 ### 方法
 
 |事件名|说明|返回值|
 |---|------|-----|
 |analysised|获取菜单时触发|所有顶级权限|
+|afterOut|退出之后触发|无|
 
 <script>
 import WMenu from '../emmenudtbtion/core/menu/Menu';

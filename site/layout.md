@@ -27,12 +27,14 @@
 |orgTitle|主办后台名称|String|否|'切换主办版'|
 |headerLink|主办后台名称的链接|String|否|'javascript:;'|
 |headerTarget|主办后台名称的跳转方式|String|否|'_self'|
+|afterOut|退出之后触发|Function|否|() => {}|
 
 ### 方法
 
 |事件名|说明|返回值|
 |---|------|-----|
 |analysised|获取菜单时触发|所有顶级权限|
+|afterOut|退出之后触发|无|
 
 <script>
 import WLayout from '../emmenudtbtion/core/layout/Layout';
