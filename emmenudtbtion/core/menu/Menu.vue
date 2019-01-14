@@ -89,6 +89,10 @@
         default: '',
       },
       logoutAction: String,
+      afterOut: {
+        type: Function,
+        default: () => {},
+      },
       menus: {
         type: Array,
         default: () => [],
@@ -169,7 +173,8 @@
         window.$cookie.remove(CONSTANT.EVENT_USER);
         // 不加定时器，登录cookie还在
         setTimeout(() => {
-          window.location.href = `${this.env.ACCOUNT}login`;
+          this.afterOut();
+          this.$emit('afterOut');
         }, 0);
       },
       // 免费发活动和退出 end

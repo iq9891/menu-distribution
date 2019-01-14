@@ -1,6 +1,6 @@
 <template>
   <div class="wd-layout" :class="{'on': !mainStatus}">
-    <wd-menu :menus="menusValue" :orgTitle="orgTitle" :orgTarget="orgTarget" :orgPath="orgPath" :logo="logoValue" :title="menuTitleValue" :active="activeValue" :logoutAction="logoutAction" @analysised="analysised" :headerLink="headerLink" :headerTarget="headerTarget"></wd-menu>
+    <wd-menu :menus="menusValue" :orgTitle="orgTitle" :orgTarget="orgTarget" :orgPath="orgPath" :logo="logoValue" :title="menuTitleValue" :active="activeValue" :logoutAction="logoutAction" @analysised="analysised" :headerLink="headerLink" :headerTarget="headerTarget" @afterOut="afterOutFn"></wd-menu>
     <wd-bar :navs="navsValue" :active="barActiveValue" :disabled="disabledValue" :title="barNameValue" :show="showStatus1" v-if="navsValue.length" :collapse="collapseValue" @collapsed="changeShowStatus"></wd-bar>
     <div class="wd-layout-main" :class="{'wd-layout-main-large': !navsValue.length}">
       <span class="wd-layout-collapse wd-layout-collapse-hide" v-show="!mainStatus" v-if="navsValue.length" @click="openBar">
@@ -59,6 +59,10 @@ export default {
     show: Boolean, // 二级是否显示
     logoutAction: String,
     rule: Object,
+    afterOut: {
+      type: Function,
+      default: () => {},
+    },
   },
   computed: {
     logoValue() {
@@ -106,6 +110,10 @@ export default {
     },
     updateMain(val) {
       this.mainStatus = val;
+    },
+    afterOut() {
+      this.afterOut();
+      this.$emit('afterOut');
     },
   },
   components: {
