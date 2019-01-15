@@ -111,7 +111,7 @@ export default {
     updateMain(val) {
       this.mainStatus = val;
     },
-    afterOut() {
+    afterOutFn() {
       this.afterOut();
       this.$emit('afterOut');
     },
