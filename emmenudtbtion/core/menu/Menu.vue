@@ -169,13 +169,8 @@
         });
       },
       logoutSuc() {
-        window.$cookie.remove(CONSTANT.EVENT_TOKE);
-        window.$cookie.remove(CONSTANT.EVENT_USER);
-        // 不加定时器，登录cookie还在
-        setTimeout(() => {
-          this.afterOut();
-          this.$emit('afterOut');
-        }, 0);
+        this.afterOut();
+        this.$emit('afterOut');
       },
       // 免费发活动和退出 end
     },
